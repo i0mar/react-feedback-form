@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
 import FeedbackForm from "./FeedbackForm";
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 
 function App() {
   return (
     <div className="App">
-      <Route path="/" component={FeedbackForm} />
-      <Route path="/feedback/:userID" component={FeedbackForm} />
+      <Switch>
+        <Route path="/feedback/:userID" component={FeedbackForm} />
+        <Route path="/" component={FeedbackForm} />
+      </Switch>
+      
     </div>
   );
 }

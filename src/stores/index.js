@@ -13,10 +13,9 @@ class Store {
             feedback: this.feedback
         });
         try {
-            const res = instance.post("submit/form", {
-                userid: this.userID,
+            const res = instance.post("submit/form/" + this.userID, {
                 rating: this.rating,
-                feedback: this.feedback
+                comment: this.feedback
             });
             console.log(res.data);
         } catch (error) {

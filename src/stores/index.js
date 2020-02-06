@@ -13,7 +13,7 @@ class Store {
             feedback: this.feedback
         });
         try {
-            const res = instance.post("feedback/submit/" + this.userID, {
+            const res = instance.put("feedback/submit/" + this.userID, {
                 rating: this.rating,
                 comment: this.feedback
             });

@@ -18,8 +18,10 @@ class Store {
                 comment: this.feedback
             });
             console.log(res.data);
+            alert("Feedback submitted!");
         } catch (error) {
             console.error(error);
+            alert(`Failed to submit feedback.\nError: ${error}`);
         }
     };
 }
